@@ -1,6 +1,6 @@
 {
   "name": "cart-cart-page",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/titan/schemas/project-schema.json",
   "sourceRoot": "libs/cart/cart-page/src",
   "projectType": "library",
   "generators": {},
