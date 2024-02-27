@@ -10,19 +10,19 @@
     "analytics": false
   },
   "generators": {
-    "@nx/angular:application": {
+    "@titan/angular:application": {
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
-    "@nx/angular:library": {
+    "@titan/angular:library": {
       "unitTestRunner": "jest"
     },
-    "@nx/angular": {
+    "@titan/angular": {
       "convert-tslint-to-eslint": {
         "removeTSLintIfNoMoreTSLintTargets": true
       }
     },
-    "@nx/react": {
+    "@titan/react": {
       "application": {
         "babel": true,
         "style": "css",
@@ -39,7 +39,7 @@
     }
   },
   "defaultProject": "products",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "$schema": "./node_modules/titan/schemas/titan-schema.json",
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
@@ -49,7 +49,7 @@
     "e2e": {
       "inputs": ["default", "^production"]
     },
-    "@nx/jest:jest": {
+    "@titan/jest:jest": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "cache": true,
       "options": {
@@ -62,7 +62,7 @@
         }
       }
     },
-    "@nx/eslint:lint": {
+    "@titan/eslint:lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
       "cache": true
     }
@@ -83,17 +83,17 @@
       "!{projectRoot}/test-setup.[jt]s"
     ]
   },
-  "nxCloudAccessToken": "YmM1MGMwMTUtNzAyYi00ZjM4LWExNGUtZDM2ZjYyNzNiODAxfHJlYWQ=",
+  "titanCloudAccessToken": "YmM1MGMwMTUtNzAyYi00ZjM4LWExNGUtZDM2ZjYyNzNiODAxfHJlYWQ=",
   "parallel": 1,
   "plugins": [
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@titan/eslint/plugin",
       "options": {
         "targetName": "lint"
       }
     },
     {
-      "plugin": "@nx/cypress/plugin",
+      "plugin": "@titan/cypress/plugin",
       "options": {
         "targetName": "e2e",
         "ciTargetName": "e2e-ci",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "plugin": "@nx/jest/plugin",
+      "plugin": "@titan/jest/plugin",
       "options": {
         "targetName": "test"
       }
