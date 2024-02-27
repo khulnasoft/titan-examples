@@ -1,12 +1,12 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "plugins": ["@titan"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "@nx/enforce-module-boundaries": [
+        "@titan/enforce-module-boundaries": [
           "error",
           {
             "enforceBuildableLibDependency": true,
@@ -23,12 +23,12 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
+      "extends": ["plugin:@titan/typescript"],
       "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nx/javascript"],
+      "extends": ["plugin:@titan/javascript"],
       "rules": {}
     },
     {
